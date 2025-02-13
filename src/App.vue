@@ -1,26 +1,56 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="layout">
+    <div class="content">
+      <profile-section></profile-section>
+      <main-content></main-content>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProfileSection from './components/ProfileSection.vue';
+import MainContent from './components/MainContent.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ProfileSection,
+    MainContent
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.layout {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: linear-gradient(180deg, rgba(255, 200, 3, 0.5) 16%, rgba(0, 194, 255, 0.5) 100%);
+    height: 100%;
+  }
 }
 </style>
