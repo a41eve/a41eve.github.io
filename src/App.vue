@@ -34,15 +34,19 @@ a {
   text-decoration: none;
 }
 
-li {
-  list-style: none;
-}
-
 h2 {
   text-transform: uppercase;
   font-size: 19px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.5px;
+
+  @media (max-width: 950px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 886px) {
+    font-size: 14px;
+  }
 }
 
 .layout {
