@@ -2,15 +2,17 @@
     <aside class="profile-section">
         <section class="profile-section__header">
             <img src="../assets/images/logo.jpg" alt="Profile Picture" class="picture" />
-            <h1 class="name">
-                <span class="bold">Дмитрий</span>
-                <span class="thin">Рязанский</span>
-            </h1>
-            <p class="developer">Фронтенд-разработчик - Веб-разработка и UI-дизайн</p>
+            <div class="main-title">
+                <h1 class="name">
+                    <span class="bold">Дмитрий</span>
+                    <span class="thin">Рязанский</span>
+                </h1>
+                <p class="developer">Фронтенд-разработчик - Веб-разработка</p>
+            </div>
         </section>
         <section class="profile-section__profile">
             <h2>Профиль</h2>
-            <p class="profile-description">Я Начинающий Фронтенд-разработчик и UI-дизайнер, увлеченный созданием
+            <p class="profile-description">Я Начинающий Фронтенд-разработчик, увлеченный созданием
                 адаптивных и удобных
                 веб-приложений. Обладаю опытом работы с современными фреймворками, такими как Vue.js и Nuxt, а также
                 владею HTML, CSS и JavaScript. Обучаюсь, внимателен к деталям, умею работать как
@@ -43,11 +45,11 @@
                     </div>
                     <div class="item">
                         <img src="../assets/icons/photoshop.svg" alt="tools icon">
-                        <span>Photoshop</span>
+                        <span>Adobe Photoshop</span>
                     </div>
                     <div class="item">
                         <img src="../assets/icons/illustrator.svg" alt="tools icon">
-                        <span>Illustrator</span>
+                        <span>Adobe Illustrator</span>
                     </div>
                     <div class="item">
                         <img src="../assets/icons/canva.svg" alt="tools icon">
@@ -90,20 +92,22 @@
                 </div>
             </div>
         </section>
-        <section class="profile-section__other-skills">
-            <h2>Другие навыки</h2>
-            <ul class="other-skills__list">
-                <li class="list__item">Дизайн продукта</li>
-                <li class="list__item">Редактирование изображений</li>
-            </ul>
-        </section>
-        <section class="profile-section__hobbies">
-            <h2>Хобби</h2>
-            <ul class="hobbies__list">
-                <li class="list__item">Тренажерный зал</li>
-                <li class="list__item">Видеоигры</li>
-                <li class="list__item">Вождение</li>
-            </ul>
+        <section class="profile-section__extras">
+            <div class="other-skills">
+                <h2>Другие навыки</h2>
+                <ul class="other-skills__list">
+                    <li class="list__item">Дизайн продукта</li>
+                    <li class="list__item">Редактирование изображений</li>
+                </ul>
+            </div>
+            <div class="hobbies">
+                <h2>Хобби</h2>
+                <ul class="hobbies__list">
+                    <li class="list__item">Тренажерный зал</li>
+                    <li class="list__item">Видеоигры</li>
+                    <li class="list__item">Вождение</li>
+                </ul>
+            </div>
         </section>
     </aside>
 </template>
@@ -119,7 +123,7 @@ li {
 }
 
 .profile-section {
-    width: 400px;
+    
     text-align: center;
     padding: 80px 80px 50px 80px;
     background: linear-gradient(180deg, rgba(255, 200, 3, 0.5) 16%, rgba(0, 194, 255, 0.5) 100%);
@@ -140,6 +144,11 @@ li {
     @media (max-width: 590px) {
         width: 205px;
         padding: 52px 0px 50px 0px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 45px 0px 20px 0px;
     }
 
     img {
@@ -163,52 +172,72 @@ li {
         }
     }
 
-    .name {
-        font-size: 25px;
-        display: inline-block;
-        transform: scaleY(1.1);
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-
-        @media (max-width: 950px) {
-            font-size: 19px;
+    &__header {
+        @media (max-width: 480px) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 30px 0 30px;
         }
 
-        @media (max-width: 886px) {
-            font-size: 15px;
+        .name {
+            font-size: 25px;
+            display: inline-block;
+            transform: scaleY(1.1);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            @media (max-width: 950px) {
+                font-size: 19px;
+            }
+
+            @media (max-width: 886px) {
+                font-size: 15px;
+            }
+
+            @media (max-width: 590px) {
+                font-size: 13px;
+            }
+
+            @media (max-width: 480px) {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            @media (max-width: 397px) {
+                display: flex;
+                justify-content: center;
+            }
+
+            .bold {
+                font-weight: 700;
+                padding: 0 3px;
+            }
+
+            .thin {
+                font-weight: 200;
+                padding: 0 3px;
+            }
         }
 
-        @media (max-width: 590px) {
-            font-size: 13px;
-        }
+        .developer {
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: -10px;
 
-        .bold {
-            font-weight: 700;
-            padding: 0 3px;
-        }
+            @media (max-width: 950px) {
+                font-size: 13px;
+            }
 
-        .thin {
-            font-weight: 200;
-            padding: 0 3px;
-        }
-    }
+            @media (max-width: 886px) {
+                font-size: 11px;
+            }
 
-    .developer {
-        text-transform: uppercase;
-        font-size: 16px;
-        font-weight: 300;
-        margin-top: -10px;
-
-        @media (max-width: 950px) {
-            font-size: 13px;
-        }
-
-        @media (max-width: 886px) {
-            font-size: 11px;
-        }
-
-        @media (max-width: 590px) {
-            font-size: 8.8px;
+            @media (max-width: 590px) {
+                font-size: 8.8px;
+            }
         }
     }
 
@@ -319,7 +348,7 @@ li {
             .tools-items {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: space-around;
                 gap: 30px;
                 padding: 25px;
                 background-color: rgba(255, 255, 255, 0.25);
@@ -340,6 +369,7 @@ li {
                 }
 
                 .item {
+                    width: 70px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -380,84 +410,92 @@ li {
         }
     }
 
-    &__other-skills {
-        font-family: 'Roboto', sans-serif;
-        margin-top: 50px;
-
-        @media (max-width: 590px) {
-            margin-top: 40px;
+    &__extras {
+        @media (max-width: 480px) {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
 
-        h2 {
-            margin-bottom: 30px;
-
-            @media (max-width: 886px) {
-                margin-bottom: 15px;
-            }
+        .other-skills {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 50px;
 
             @media (max-width: 590px) {
-                font-size: 9px;
-                margin-bottom: 9.7px;
+                margin-top: 40px;
+            }
+
+            h2 {
+                margin-bottom: 30px;
+
+                @media (max-width: 886px) {
+                    margin-bottom: 15px;
+                }
+
+                @media (max-width: 590px) {
+                    font-size: 9px;
+                    margin-bottom: 9.7px;
+                }
+            }
+
+            .other-skills__list {
+                line-height: 25px;
+                margin-left: -40px;
+                font-size: 18px;
+
+                @media (max-width: 950px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 886px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 590px) {
+                    font-size: 8px;
+                    line-height: 12.7px;
+                }
             }
         }
 
-        .other-skills__list {
-            line-height: 25px;
-            margin-left: -40px;
-            font-size: 18px;
-
-            @media (max-width: 950px) {
-                font-size: 16px;
-            }
-
-            @media (max-width: 886px) {
-                font-size: 13px;
-            }
+        .hobbies {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 50px;
 
             @media (max-width: 590px) {
-                font-size: 8px;
-                line-height: 12.7px;
-            }
-        }
-    }
-
-    &__hobbies {
-        font-family: 'Roboto', sans-serif;
-        margin-top: 50px;
-
-        @media (max-width: 590px) {
-            margin-top: 40px;
-        }
-
-        h2 {
-            margin-bottom: 30px;
-
-            @media (max-width: 886px) {
-                margin-bottom: 15px;
+                margin-top: 40px;
             }
 
-            @media (max-width: 590px) {
-                font-size: 9px;
-                margin-bottom: 9.7px;
-            }
-        }
+            h2 {
+                margin-bottom: 30px;
 
-        .hobbies__list {
-            line-height: 25px;
-            margin-left: -40px;
-            font-size: 18px;
+                @media (max-width: 886px) {
+                    margin-bottom: 15px;
+                }
 
-            @media (max-width: 950px) {
-                font-size: 16px;
+                @media (max-width: 590px) {
+                    font-size: 9px;
+                    margin-bottom: 9.7px;
+                }
             }
 
-            @media (max-width: 886px) {
-                font-size: 13px;
-            }
+            .hobbies__list {
+                line-height: 25px;
+                margin-left: -40px;
+                font-size: 18px;
 
-            @media (max-width: 590px) {
-                font-size: 8px;
-                line-height: 12.7px;
+                @media (max-width: 950px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 886px) {
+                    font-size: 13px;
+                }
+
+                @media (max-width: 590px) {
+                    font-size: 8px;
+                    line-height: 12.7px;
+                }
             }
         }
     }

@@ -11,8 +11,7 @@
                     <p class="description-list__paragraph">Разработал интерфейс интернет-магазина в рамках
                         дипломной работы, проработав
                         структуру, дизайн и адаптивность.</p>
-                    <p class="description-list__paragraph">Выполнил вёрстку двух страниц для компании "Профипарк":
-                        Страница постов, Карточки постов.</p>
+                    <p class="description-list__paragraph">Выполнил вёрстку двух страниц для сайта компании.</p>
 
                     <p class="description-goal">Стремлюсь к совершенствованию навыков и изучению новых технологий для
                         создания современных и удобных веб-приложений.</p>
@@ -38,6 +37,10 @@ export default {
         padding: 64px 45px 50px 45px;
     }
 
+    @media (max-width: 480px) {
+        padding: 30px 15px 50px 15px;
+    }
+
     &__work-history {
         .work-history__wrapper {
             display: flex;
@@ -46,6 +49,10 @@ export default {
 
             @media (max-width: 590px) {
                 max-width: 300px;
+            }
+
+            @media (max-width: 480px) {
+                width: 100%;
             }
 
             .work-history__title {
@@ -63,6 +70,11 @@ export default {
                     font-size: 10.3px;
                     padding: 8px 0;
                 }
+
+                @media (max-width: 480px) {
+                    font-size: 11px;
+                    padding: 5px 0;
+                }
             }
 
             .work-history__sub-title {
@@ -75,6 +87,11 @@ export default {
 
                 @media (max-width: 590px) {
                     font-size: 7.5px;
+                }
+
+                @media (max-width: 480px) {
+                    margin-top: -5px;
+                    font-size: 10px;
                 }
             }
 
@@ -91,6 +108,10 @@ export default {
                     padding: 0 40px;
                     margin-top: -2px;
                 }
+
+                @media (max-width: 480px) {
+                    font-size: 7px;
+                }
             }
 
             .description-title {
@@ -104,6 +125,10 @@ export default {
                 @media (max-width: 590px) {
                     font-size: 6.5px;
                 }
+
+                @media (max-width: 480px) {
+                    font-size: 10px;
+                }
             }
 
             .description-list__paragraph {
@@ -115,6 +140,10 @@ export default {
                 @media (max-width: 590px) {
                     font-size: 6px;
                     line-height: auto;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 10px;
                 }
 
                 &::before {
@@ -133,6 +162,11 @@ export default {
                         width: 2.9px;
                         height: 2.9px;
                     }
+
+                    @media (max-width: 480px) {
+                        top: 6px;
+                        left: -9px;
+                    }
                 }
             }
 
@@ -142,6 +176,10 @@ export default {
                 @media (max-width: 590px) {
                     font-size: 6px;
                     line-height: auto;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 10px;
                 }
             }
         }

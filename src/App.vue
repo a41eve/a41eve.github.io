@@ -55,6 +55,10 @@ h2 {
     grid-template-columns: 1fr 2fr;
     background: linear-gradient(180deg, rgba(255, 200, 3, 0.5) 16%, rgba(0, 194, 255, 0.5) 100%);
     height: 100%;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>
