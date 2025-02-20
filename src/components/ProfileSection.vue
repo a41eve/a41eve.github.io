@@ -123,7 +123,7 @@ li {
 }
 
 .profile-section {
-    
+
     text-align: center;
     padding: 80px 80px 50px 80px;
     background: linear-gradient(180deg, rgba(255, 200, 3, 0.5) 16%, rgba(0, 194, 255, 0.5) 100%);
@@ -275,6 +275,10 @@ li {
             @media (max-width: 590px) {
                 font-size: 8.5px;
                 padding: 0 25px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 12px;
             }
         }
     }
