@@ -23,11 +23,11 @@
         <section class="profile-section__contacts">
             <div class="contacts-number">
                 <p>Номер телефона</p>
-                <span>+12092132827</span>
+                <span>+7(982)-320-74-06</span>
             </div>
             <div class="contacts-email">
                 <p>Электронная почта</p>
-                <span>contact@plugscenes.com7</span>
+                <span>veter.210703@gmail.com</span>
             </div>
             <div class="contacts-address">
                 <p>Адрес</p>
@@ -364,6 +364,10 @@ li {
                     row-gap: 12px;
                 }
 
+                @media (max-width: 350px) {
+                    column-gap: 70px;
+                }
+
                 &:last-child {
                     margin-top: 70px;
 
@@ -389,6 +393,11 @@ li {
                         @media (max-width: 590px) {
                             width: 30px;
                             height: 30px;
+                        }
+
+                        @media (max-width: 350px) {
+                            width: 50px;
+                            height: 50px;
                         }
                     }
 
